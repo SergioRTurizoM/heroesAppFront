@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tableheroes">
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef> Picture </th>
+      <td mat-cell *matCellDef="let element"> <img src={{element.image}}  alt=""></td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef>Options </th>
+      <td mat-cell *matCellDef="let element">     <button
+        mat-raised-button
+        color="warn"
+        type="submit"  
+        (click)="delete(element)"
+      >
+        Delete
+      </button> </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

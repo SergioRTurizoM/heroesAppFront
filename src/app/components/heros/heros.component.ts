@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HeroService } from 'src/app/services/hero.service';
 import { HeroInterface } from '../../interfaces/hero.interface';
 import { HerocardComponent } from '../cards/herocard/herocard.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { HeroesCollectionComponent } from '../heroes-collection/heroes-collection.component';
 
 
 @Component({
@@ -11,7 +13,7 @@ import { HerocardComponent } from '../cards/herocard/herocard.component';
 })
 export class HerosComponent implements OnInit {
   heroesList: any[] = [];
-
+  page: any
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {

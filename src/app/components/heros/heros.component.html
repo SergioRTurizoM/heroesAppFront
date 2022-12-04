@@ -1,9 +1,32 @@
-<H1>Heroes list</H1>
+<H1 style="text-align: center;">Heroes list</H1>
+
+<mat-tab-group mat-align-tab="center" animationDuration="10ms">
+  <mat-tab label="Search">
+    <div class="items">
 
 
-<div>
-    <div *ngFor="let heroe of heroesList">
-        <app-herocard [heroe]="heroe"></app-herocard>
+        <app-buscar></app-buscar>
     </div>
-</div>
 
+    <div class="container">
+      <div
+        *ngFor="
+          let heroe of heroesList
+            | paginate : { itemsPerPage: 5, currentPage: page }
+        "
+      >
+        <app-herocard [heroe]="heroe"></app-herocard>
+      </div>
+   
+    </div>
+    <pagination-controls 
+    class="items"
+    (pageChange)="page = $event"
+    previousLabel="Anterior"
+    nextLabel="Siguiente"
+  ></pagination-controls>
+  </mat-tab>
+  <mat-tab label="Heroes Collection">
+    <app-heroes-collection></app-heroes-collection>
+  </mat-tab>
+</mat-tab-group>

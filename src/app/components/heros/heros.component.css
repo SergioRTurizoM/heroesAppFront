@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+}
+
+.items{
+    position: relative;
+    left: 30%;
+    right: 50%;
+}

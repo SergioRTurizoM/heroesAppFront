@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogCardComponent } from '../../dialog-card/dialog-card.component';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-herocard',
@@ -8,10 +11,29 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HerocardComponent implements OnInit {
   @Input() heroe!: any;
 
-  constructor() {}
+  public heroeCardData: any;
 
-  ngOnInit(): void {
+  constructor(public dialog: MatDialog) {}
 
-    console.log(this.heroe)
+  ngOnInit(): void {}
+
+  enviarTarjeta(heroe: any) {
+    let dataHero = {
+      idApi: heroe.id,
+      name: heroe.name,
+      description: heroe.description,
+      image: `${heroe.name}/portrait_xlarge.${heroe.thumbnail.extension}`,
+    };
+    console.log(heroe);
+    console.log(dataHero);
+    Swal.fire('Hero added to collection')
+  }
+
+  openDialog(heroe:any){
+    this.dialog.open(DialogCardComponent, {
+      data: heroe
+    })
+
+    console.log(heroe);
   }
 }
