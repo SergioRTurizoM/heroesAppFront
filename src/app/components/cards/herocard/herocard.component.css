@@ -1,0 +1,12 @@
+
+.first-card {
+
+    width: 400px;
+    margin-bottom: 8px;
+
+  }
+
+  .appearsection {
+    height: 4em;
+    overflow: scroll;
+  }

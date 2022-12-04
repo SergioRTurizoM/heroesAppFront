@@ -1,0 +1,25 @@
+<div>
+  <mat-card class="first-card">
+    <mat-card-header>
+      <mat-card-title>{{ heroe.name }}</mat-card-title>
+      <img
+        mat-card-m-image
+        src="{{ heroe.thumbnail.path }}/portrait_xlarge.{{
+          heroe.thumbnail.extension
+        }}"
+        alt=""
+      />
+    </mat-card-header>
+
+    <mat-card-content>{{ heroe.description }} </mat-card-content>
+
+    <mat-card-subtitle>Appears in:</mat-card-subtitle>
+    <mat-card-content class="appearsection">
+      <div *ngFor="let item of heroe.series.items">
+        <p>{{ item.name }}</p>
+      </div>
+    </mat-card-content>
+
+    <button mat-raised-button color="primary">Add</button>
+  </mat-card>
+</div>
