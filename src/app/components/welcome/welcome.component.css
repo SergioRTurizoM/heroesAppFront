@@ -1,0 +1,41 @@
+body {
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
+}
+
+h1 {
+  color: aliceblue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.blogs.es/361fd5/283/1366_2000.jpg");
+}
+
+.banner {
+  position: relative;
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
+  top: 30%;
+  margin: 0 auto;
+  width: 60%;
+  padding: 8%;
+
+
+/* From https://css.glass */
+background: rgba(19, 8, 223, 0.37);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.6px);
+-webkit-backdrop-filter: blur(17.6px);
+border: 1px solid rgba(19, 8, 223, 0.02);
+}

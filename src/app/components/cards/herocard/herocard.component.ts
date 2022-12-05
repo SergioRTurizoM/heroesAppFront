@@ -26,6 +26,7 @@ export class HerocardComponent implements OnInit {
     };
     console.log(heroe);
     console.log(dataHero);
+    localStorage.setItem('Heroe', JSON.stringify(dataHero))
     Swal.fire('Hero added to collection')
   }
 

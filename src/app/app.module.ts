@@ -32,6 +32,12 @@ import { DialogCardComponent } from './components/dialog-card/dialog-card.compon
 import {MatTabsModule} from '@angular/material/tabs';
 import { HeroesCollectionComponent } from './components/heroes-collection/heroes-collection.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -41,8 +47,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BuscarComponent,
     DialogCardComponent,
     HeroesCollectionComponent,
+    RegisterComponent,
+    LoginComponent,
+    WelcomeComponent,
+    NavbarComponent,
   ],
   imports: [
+    
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
