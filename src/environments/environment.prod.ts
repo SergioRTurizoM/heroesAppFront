@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: "https://heroesappback-production.up.railway.app/"
+  baseUrl: "https://heroesappback-production.up.railway.app/api/v1"
 };
